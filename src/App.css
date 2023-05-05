@@ -110,6 +110,7 @@ body{
   gap: 3.5rem;
   align-items: center;
   font-size: 1.3rem;
+  position: relative;
 }
 .btn{
   border: none;
@@ -120,6 +121,7 @@ body{
   transition: var(--transition);
   border-radius: 0.5rem;
 }
+
 .sign{
   background-color: var(--app-background-color-variant);
   border: 1px solid transparent;
@@ -130,8 +132,64 @@ body{
   border: 1px solid var(--app-background-color-variant);
   color: var(--app-background-color-variant);
 }
+.btns{
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+  animation: move  ease infinite alternate-reverse;
+  animation-duration: 10s;
+  animation-delay: 1s;
+}
+@keyframes move {
+  0%{
+    transform: translateX(1rem);
+  }
+  50%{
+    transform: translateX(-10rem);
+  }
+  100%{
+    transform: translateX(-20rem);
+  }
+  
+}
+.buttons{
+  overflow: hidden;
+  width: 10rem;
+  height: 6rem;
+}
+.header-btn{
+  padding: 1.5rem 2rem;
+  color: white;
+  border: 1px solid transparent;
+  width: max-content;
+}
+
+.rel{
+  background-color: var(--app-background-color-variant);
+}
+.rel:hover{
+  border-color: var(--app-background-color-variant);
+  background: transparent;
+}
+.dwn{
+  background-color: var(--app-app-color-light);
+}
+.dwn:hover{
+  border-color: var(--app-app-color-light);
+  background: transparent;
+}
+.par{
+  background-color: var(--app-app-color-deep);
+}
+.par:hover{
+  border-color: var(--app-app-color-deep);
+  background: transparent;
+}
+
+
 .link{
   color: white;
+  padding: 1rem 0.5rem;
 }
 .hamburger{
   display: none;
@@ -154,12 +212,13 @@ body{
   top: 54px;
   left: 50%;
   border-radius: 0.2rem;
-  transition: 0.3s ease;
+  transition: 0.2s ease;
   display: none;
   cursor: pointer;
 }
 .submenu h4{
   color: darkblue;
+  font-size: 1.2rem;
 }
 .grid{
   display: grid;
@@ -176,9 +235,10 @@ body{
 .grid a:hover{
   color: var(--app-app-color-deep);
 }
-.col-2, .col-1, .col-3, .col-4{
+.col-2, .col-1, .col-3, .col-4, .col-5{
   grid-template-columns: repeat(2, 1fr);
 }
+
 
 .submenu::before{
   content: '';
@@ -187,7 +247,7 @@ body{
   height: 0;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-  border-bottom: 5px solid white;
+  border-bottom: 5px solid pink;
   position: absolute;
   top: -0.3rem;
   left: 45%;
@@ -225,6 +285,7 @@ body{
   height: 100vh;
   z-index: unset;
   flex-direction: column;
+  gap: 3rem;
 }
 .show-sidebar{
   display: none;

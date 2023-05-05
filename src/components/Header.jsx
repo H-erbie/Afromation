@@ -11,9 +11,11 @@ const Header = () => {
                <p>Bringing to life the stories and experiences of Africa</p>
             </div>
             <div className="buttons">
-                <button className="bnt"></button>
-                <button className="bnt"></button>
-                <button className="bnt"></button>
+                <div className="btns">
+                <button className="btn header-btn rel">Releases</button>
+                <button className="btn header-btn dwn">Download software</button>
+                <button className="btn header-btn par">Partner with us</button>
+                </div>
             </div>
         </div>
     </div>

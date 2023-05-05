@@ -9,9 +9,9 @@ const Navbar = () => {
         const page = e.target.textContent;
         const tempBtn = e.target.getBoundingClientRect();
         const center = ((tempBtn.left + tempBtn.right) / 2) - 130;
-        const bottom = tempBtn.bottom + 10;
+        const bottom = tempBtn.bottom - 10;
         openSubmenu(page, {center, bottom});
-    }
+    }   
     
     const handleSubmenu = (e) => {
         if(!e.target.classList.contains('link')){
